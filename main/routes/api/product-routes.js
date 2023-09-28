@@ -116,7 +116,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
     if (!productData) {
-      res.status(404).json({ 'No user with this id'});
+      res.status(404).json({ message: 'No user with this id' });
       return;
     }
     res.status(200).json(productData);
