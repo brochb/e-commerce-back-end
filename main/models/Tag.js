@@ -8,18 +8,18 @@ Tag.init(
   {
     // define columns
     id: {
-      tpes: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     tag_name: {
-      types: DataTypes.STRING
+      type: DataTypes.STRING,
     }
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'tag',
