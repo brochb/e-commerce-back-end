@@ -24,7 +24,8 @@ router.get('/:id', async (req, res) => {
     const productData = await Product.findByPk(req.params.id, {
       include: [
         { model: Category, attributes: ['id', 'category_name'] },
-        { model: Tag, attributes: ['id', 'tag_name'] },]
+        { model: Tag, attributes: ['id', 'tag_name'] },
+      ]
     });
     if (!productData) {
       res.status(404).json({ message: 'No Product found with this id' });
@@ -41,7 +42,6 @@ router.post('/', async (req, res) => {
   try {
     // Create the product using Product model and req.body
     const productData = await Product.create(req.body);
-
     if (req.body.tagIds) {
       // Create an array of product-tag associations
       const productTagIdArr = req.body.tagIds.map((tag_id) => {
@@ -64,8 +64,10 @@ router.post('/', async (req, res) => {
 // PUT/Update one product
 router.put('/:id', async (req, res) => {
   try {
+    // Find the product by its ID
     const productData = await Product.findByPk(req.params.id);
 
+    // Check if the tag exists
     if (!productData) {
       res.status(404).json({ message: 'No product found with this id' });
       return;
@@ -114,7 +116,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
     if (!productData) {
-      res.status(404).json({ message: 'No user with this id' });
+      res.status(404).json({ message: 'No Product with this id' });
       return;
     }
     res.status(200).json(productData);
