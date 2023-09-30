@@ -3,7 +3,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// get all products
+// GET all products
 router.get('/', async (req, res) => {
   try {
     const productData = await Product.findAll({
@@ -11,7 +11,6 @@ router.get('/', async (req, res) => {
         { model: Category, attributes: ['id', 'category_name'] },
         { model: Tag, attributes: ['id', 'tag_name'] },
       ]
-      
     });
     res.status(200).json(productData);
   } catch (err) {
@@ -19,7 +18,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// get one product
+// GET one product
 router.get('/:id', async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id, {
@@ -37,13 +36,13 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Create new product
+// POST/Create new product
 router.post('/', async (req, res) => {
   try {
     // Create the product using Product model and req.body
     const productData = await Product.create(req.body);
 
-    if (req.body.tagIds.length) {
+    if (req.body.tagIds) {
       // Create an array of product-tag associations
       const productTagIdArr = req.body.tagIds.map((tag_id) => {
         return {
@@ -62,9 +61,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-
-
-// Update product
+// PUT/Update one product
 router.put('/:id', async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id);
@@ -108,7 +105,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-
+// DEL/Delete one Product
 router.delete('/:id', async (req, res) => {
   try {
     const productData = await Product.destroy({
