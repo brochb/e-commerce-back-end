@@ -12,5 +12,19 @@ app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
 app.listen(PORT, () => {
-  console.log(`Sample App listen at http://localhost:${PORT} !`);
+  console.log('-----------------------------------------------------------------------')
+  console.log('See the category-routes in action at...');
+  console.log(`http://localhost:${PORT}/api/categories`)
+  console.log('-----------------------------------------------------------------------')
+  console.log('')
+  console.log('-----------------------------------------------------------------------')
+  console.log('See the product-routes in action at...');
+  console.log(`http://localhost:${PORT}/api/products`)
+  console.log('-----------------------------------------------------------------------')
+  console.log('')
+  console.log('-----------------------------------------------------------------------')
+  console.log('See the tag-routes in action at...');
+  console.log(`http://localhost:${PORT}/api/tags`)
+  console.log('-----------------------------------------------------------------------')
+  console.log('')
 });
