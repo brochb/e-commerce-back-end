@@ -21,19 +21,19 @@
   Run the command...<br>
   source db/schema.sql<br>
   ... here is the expected outcome.<br>
- **img of expected outcome**<br>
+ ![image](https://github.com/brochb/e-commerce-back-end/assets/39662430/cd759384-f722-4f5b-8e3c-1a1a48276e6b)<br>
   After this, run quit, and leave mysql<br>
   Run the command...<br>
-  npm run seed<br>
+  **npm run seed**<br>
   This will seed the database<br>
   ... here is the expected outcome.<br>
- **img of expected outcome**<br>
+![image](https://github.com/brochb/e-commerce-back-end/assets/39662430/7ed26bf7-07d7-435f-b7e8-02389063a841)
+<br>
   From here you can run...<br>
   npm start<br>
   to start the Port listener to activate the routes<br>
   Use PostMan, Insomnia, or another related route execution programm to execute the routes.<br>
-  In addition to the above resources, please refer to this video of usage which can be found here:<br>
-**insert video of functionality**
+  In addition to the above resources, please refer to this video of usage which can be found here:<br>https://drive.google.com/file/d/15KWsTn3DBmJA6O3npruKc65Ub-jacxhP/view
 
   ## Contributing
   Please fork off repo, create a new branch, and push changes to the new branch on the repo. Await merge request completion, you will be notified when you can pull main, and close your local branch.
