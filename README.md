@@ -14,7 +14,7 @@
   - [Contact](#contact)
 
   ## Installation
-    <li>Clone the repository found on github to your local machine.<br><li>Install Node.js, and Express.js<br><li>In the root directory open an integrated terminal<br><li>Run <strong>npm i</strong> to update and install node_modules.<br><li>Run <strong>npm start</strong>
+  <li>Clone the repository found on github to your local machine.<br><li>Install Node.js, and Express.js<br><li>In the root directory open an integrated terminal<br><li>Run <strong>npm i</strong> to update and install node_modules.<br><li>Run <strong>npm start</strong>
 
   ## Usage
   To start, open mysql in your integrated terminal.<br>
